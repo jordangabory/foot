@@ -16,6 +16,7 @@
 .DS_Store
 **/*.log
 tags
+.vscode
 
 ers.txt
 
