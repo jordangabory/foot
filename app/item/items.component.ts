@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit , Inject} from "@angular/core";
+import { isAndroid } from "platform";
 
 import { Item } from "./item";
 import { ItemService } from "./item.service";
@@ -14,7 +15,7 @@ export class ItemsComponent implements OnInit {
 
     // This pattern makes use of Angular’s dependency injection implementation to inject an instance of the ItemService service into this class. 
     // Angular knows about this service because it is included in your app’s main NgModule, defined in app.module.ts.
-    constructor(private itemService: ItemService , ) {  }
+    constructor( @Inject('platform') public platform , private itemService: ItemService  ) {  }
 
     ngOnInit(): void {
         this.items = this.itemService.getItems();
