@@ -1,4 +1,6 @@
 {
+	"name" :"jordan" , 
+	"version": "1.2.5" , 
 	"description": "NativeScript Application",
 	"license": "SEE LICENSE IN <your-license-filename>",
 	"readme": "NativeScript Application",
