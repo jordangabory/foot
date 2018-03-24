@@ -11,12 +11,30 @@ The ActionBar is the NativeScript common abstraction over the Android ActionBar 
 http://docs.nativescript.org/ui/action-bar
 -->
 <ActionBar title="FooT" class="action-bar" >
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="openDrawer()"></NavigationButton>
         <StackLayout orientation="horizontal" android:horizontalAlignment="center" ios:horizontalAlignment="center">
-        <Image src="res://nativescript_logo" class="action-image"></Image>
-        <Label text="FOOT"  class="action-label"></Label>
+        <Label text="FOOT"  class="action-label" ></Label>
       </StackLayout>
 </ActionBar>
-
+<RadSideDrawer  tkExampleTitle tkToggleNavButton>
+        <StackLayout tkDrawerContent class="sideStackLayout">
+            <StackLayout class="sideTitleStackLayout">
+                <Label text="Navigation Menu"></Label>
+            </StackLayout>
+            <StackLayout class="sideStackLayout">
+                <Label text="Mon compte" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Mes videos" class="sideLabel"></Label>
+                <Label text="Mes abonnements" class="sideLabel"></Label>
+                <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+                <Label text="Mes videos" class="sideLabel"></Label>
+                <Label text="Mes abonnements" class="sideLabel"></Label>
+            </StackLayout>
+            <Label text="Close Drawer" color="lightgray" padding="10" style="horizontal-align: center" (tap)="onCloseDrawerTap()"></Label>
+        </StackLayout>
+        <StackLayout tkMainContent>
+            
+        </StackLayout>
+</RadSideDrawer>
 <!--
 The StackLayout stacks UI components on the screen — either vertically or horizontally.
 In this case, the StackLayout does vertical stacking; you can change the stacking to
@@ -27,11 +45,4 @@ These components make use of several CSS class names that are part of the Native
 core theme, such as p-20, btn, h2, and list-group. You can view a full list of the
 class names available for styling your app at https://docs.nativescript.org/ui/theme.
 -->
-<StackLayout class="page">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
-                class="list-group-item"></Label>
-        </ng-template>
-    </ListView>
-</StackLayout>
+
