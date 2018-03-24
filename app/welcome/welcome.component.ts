@@ -7,6 +7,7 @@ import { Page} from "ui/page";
     selector: "welcome",
     moduleId: module.id,
     templateUrl: "./welcome.component.html",
+    styleUrls: ['welcome.component.css']
 })
 export class WelcomeComponent implements OnInit {
 

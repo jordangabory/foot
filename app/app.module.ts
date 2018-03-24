@@ -3,11 +3,11 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-import { ItemService } from "./item/item.service";
 import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./item/item-detail.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import * as platform from 'platform' ;
+import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
+import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -21,16 +21,16 @@ import * as platform from 'platform' ;
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        NativeScriptUICalendarModule,
+        NativeScriptUISideDrawerModule
     ],
     declarations: [
         AppComponent,
         ItemsComponent,
-        ItemDetailComponent,
         WelcomeComponent
     ],
     providers: [
-        ItemService,
         { provide : 'platform', useValue: platform}
     ], 
     schemas: [
