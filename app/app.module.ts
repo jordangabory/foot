@@ -3,11 +3,9 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { AppRoutingModule } from "./app.routing";
 import { AppComponent } from "./app.component";
 
-import { ItemsComponent } from "./item/items.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import * as platform from 'platform' ;
-import { NativeScriptUICalendarModule } from "nativescript-ui-calendar/angular";
-import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -21,13 +19,10 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule,
-        NativeScriptUICalendarModule,
-        NativeScriptUISideDrawerModule
+        AppRoutingModule
     ],
     declarations: [
         AppComponent,
-        ItemsComponent,
         WelcomeComponent
     ],
     providers: [

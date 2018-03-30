@@ -9,23 +9,20 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-ui-sidedraw
 import { RadSideDrawer } from 'nativescript-ui-sidedrawer';
 
 @Component({
-    selector: "ns-items",
     moduleId: module.id,
-    templateUrl: "./items.component.html",
-    styleUrls: ['items.component.css']
+    selector: 'ns-welcomesport',
+    templateUrl: './welcomesport.component.html',
+    styleUrls: ['./welcomesport.component.css']
 })
-export class ItemsComponent implements AfterViewInit , OnInit {
+export class WelcomeSportComponent  implements AfterViewInit , OnInit {
+  
+  private _mainContentText: string;
 
-    private _mainContentText: string;
-    
-    
-    // This pattern makes use of Angular’s dependency injection implementation to inject an instance of the ItemService service into this class. 
-    // Angular knows about this service because it is included in your app’s main NgModule, defined in app.module.ts.
-    constructor( @Inject('platform') public platform ,  private _changeDetectionRef: ChangeDetectorRef  ) { 
-        
-     }
+  constructor(
+    @Inject('platform') public platform,  private _changeDetectionRef: ChangeDetectorRef
+  ) {}
 
-    @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
+  @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: RadSideDrawer;
 
     ngAfterViewInit() {
