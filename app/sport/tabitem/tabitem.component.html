@@ -1,16 +1,32 @@
 <TabView selectedIndex="0"   sdkExampleTitle sdkToggleNavButton>
     <StackLayout *tabItem="{title: 'Mes Videos'}">
-        <Label text="NativeScript" class="m-15 h2 text-left" color="blue"></Label>
-        <ScrollView>
-            <Label [text]="content" textWrap="true" class="m-15"></Label>
+        <ScrollView >
+            <StackLayout>
+                <StackLayout *ngFor="let result of results; let i=index">
+                    <Label *ngIf="i<11" [text]="result.author" textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
+                    <Image *ngIf="i<11"  [src]="result.post_url" stretch="aspectFit" width="200" height="200" class="op"></Image>
+                </StackLayout>
+            </StackLayout>
         </ScrollView>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Mes abonnements'}">
-        <Image class="m-t-30 m-b-15" src="res://icon" width="80" height="80"></Image>
-        <Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"></Label>
+        <ScrollView >
+            <StackLayout>
+                <StackLayout *ngFor="let result of results">
+                    <Label  *ngIf="i<11" [text]="result.author"   textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
+                    <Image  *ngIf="i<11" [src]="result.post_url"   stretch="aspectFit" width="200" height="200" class="op"></Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Mes equipes'}">
-        <Image class="m-t-30 m-b-15" src="res://icon" width="80" height="80"></Image>
-        <Label text="NativeScript" textWrap="true" class="h2 m-x-auto" color="blue"></Label>
+        <ScrollView >
+            <StackLayout>
+                <StackLayout *ngFor="let result of results">
+                    <Label *ngIf="i<11" [text]="result.author"   textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
+                    <Image *ngIf="i<11" [src]="result.post_url"   stretch="aspectFit" width="200" height="200" class="op"></Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </StackLayout>
 </TabView>

@@ -14,12 +14,14 @@ import { ActionItemComponent } from './actionitem/actionitem.component';
 import { TabItemComponent }  from './tabitem/tabitem.component';
 
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
     SportRoutingModule,
-    NativeScriptUISideDrawerModule
+    NativeScriptUISideDrawerModule,
+    NativeScriptHttpClientModule
   ],
   declarations: [
     SportComponent,

@@ -6,11 +6,13 @@ import { UsersComponent }  from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
 
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
+import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
 @NgModule({
   imports: [
     NativeScriptModule,
     NativeScriptFormsModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    NativeScriptHttpClientModule
   ],
   declarations: [
       UsersComponent  
