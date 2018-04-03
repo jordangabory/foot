@@ -11,6 +11,7 @@ import { FootballComponent } from './football/football.component';
 import { TennisComponent } from './tennis/tennis.component';
 import { WelcomeSportComponent }  from './welcomesport/welcomesport.component';
 import { ActionItemComponent } from './actionitem/actionitem.component';
+import { TabItemComponent }  from './tabitem/tabitem.component';
 
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 @NgModule({
@@ -27,7 +28,8 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
     FootballComponent,
     TennisComponent,
     WelcomeSportComponent,
-    ActionItemComponent
+    ActionItemComponent,
+    TabItemComponent
   ],
   schemas: [
     NO_ERRORS_SCHEMA,
