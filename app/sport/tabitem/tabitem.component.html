@@ -3,8 +3,7 @@
         <ScrollView >
             <StackLayout>
                 <StackLayout *ngFor="let result of results; let i=index">
-                    <Label *ngIf="i<11" [text]="result.author" textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
-                    <Image *ngIf="i<11"  [src]="result.post_url" stretch="aspectFit" width="200" height="200" class="op"></Image>
+                    <Label *ngIf="i<11" [text]="result.title" textWrap="true" class="m-15"  [nsRouterLink]="['/sport/detail', result.id]"></Label>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
@@ -12,9 +11,8 @@
     <StackLayout *tabItem="{title: 'Mes abonnements'}">
         <ScrollView >
             <StackLayout>
-                <StackLayout *ngFor="let result of results">
-                    <Label  *ngIf="i<11" [text]="result.author"   textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
-                    <Image  *ngIf="i<11" [src]="result.post_url"   stretch="aspectFit" width="200" height="200" class="op"></Image>
+                <StackLayout >
+                    
                 </StackLayout>
             </StackLayout>
         </ScrollView>
@@ -22,9 +20,7 @@
     <StackLayout *tabItem="{title: 'Mes equipes'}">
         <ScrollView >
             <StackLayout>
-                <StackLayout *ngFor="let result of results">
-                    <Label *ngIf="i<11" [text]="result.author"   textWrap="true" class="m-15" (tap)="getID(result.id)"></Label>
-                    <Image *ngIf="i<11" [src]="result.post_url"   stretch="aspectFit" width="200" height="200" class="op"></Image>
+                <StackLayout >
                 </StackLayout>
             </StackLayout>
         </ScrollView>

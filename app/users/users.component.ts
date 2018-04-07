@@ -14,23 +14,24 @@ import { ImageService }  from "./service/image.service";
 })
 export class UsersComponent implements OnInit {
   private results:any  ;
+  
 
   constructor(
-    @Inject('platform') public platform ,  private Image: ImageService
+    @Inject('platform') public platform , private Image: ImageService
   ) {}
 
-  ImageS () {
+   ImageS () {
     this.Image.getData().
       subscribe(
         resu => this.results = resu
       )
     }
 
-    getID (x) {
-      alert(x)
-    }
-
     ngOnInit(): void {
       this.ImageS();
-  }
+    }
+
+    ngOnDestroy() : void {
+      this.ImageS();
+    }
 }

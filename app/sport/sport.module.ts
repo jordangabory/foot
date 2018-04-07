@@ -12,6 +12,7 @@ import { TennisComponent } from './tennis/tennis.component';
 import { WelcomeSportComponent }  from './welcomesport/welcomesport.component';
 import { ActionItemComponent } from './actionitem/actionitem.component';
 import { TabItemComponent }  from './tabitem/tabitem.component';
+import { SportDetailComponent } from './sportdetail/sportdetail.component';
 
 import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angular";
 import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
@@ -31,7 +32,8 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
     TennisComponent,
     WelcomeSportComponent,
     ActionItemComponent,
-    TabItemComponent
+    TabItemComponent, 
+    SportDetailComponent
   ],
   schemas: [
     NO_ERRORS_SCHEMA,

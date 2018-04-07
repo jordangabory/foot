@@ -27,11 +27,11 @@ export class TabItemComponent implements OnInit {
       )
     }
 
-    getID (x) {
-      alert(x)
-    }
-
     ngOnInit(): void {
       this.ImageS();
-  }
+    }
+
+    ngOnDestroy() : void {
+      this.ImageS();
+    }
 }

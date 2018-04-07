@@ -7,7 +7,8 @@ import "rxjs/add/operator/do";
 
 @Injectable()
 export class ImageService {
-    private serverUrl = "https://picsum.photos/list";
+    private serverUrl = "https://jsonplaceholder.typicode.com/posts";
+    private  lom : any ;
 
     constructor(private http: HttpClient) { }
 
@@ -16,4 +17,12 @@ export class ImageService {
             return res
         });
     }
+
+    public getop(id){
+        return this.http.get("https://jsonplaceholder.typicode.com/posts/" + id).map((res)=>{
+            return res 
+        });
+    }
+
+    
 }
