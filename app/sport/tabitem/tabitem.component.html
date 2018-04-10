@@ -12,7 +12,9 @@
         <ScrollView >
             <StackLayout>
                 <StackLayout >
-                    
+                    <StackLayout *ngFor="let result of results; let i=index">
+                        <Label *ngIf="i<11" [text]="result.title" textWrap="true" class="m-15"  [nsRouterLink]="['/sport/detail', result.id]"></Label>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
@@ -20,7 +22,8 @@
     <StackLayout *tabItem="{title: 'Mes equipes'}">
         <ScrollView >
             <StackLayout>
-                <StackLayout >
+                <StackLayout *ngFor="let result of results; let i=index">
+                    <Label *ngIf="i<11" [text]="result.title" textWrap="true" class="m-15"  [nsRouterLink]="['/sport/detail', result.id]"></Label>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
