@@ -21,9 +21,9 @@
     </StackLayout>
     <StackLayout tkMainContent>
         <StackLayout class="input-field">
-            <Button class="btn btn-primary w-full " text="basket"  [nsRouterLink]="['/sport/basket']"></Button>
-            <Button class="btn btn-primary w-full " text="tennis"  [nsRouterLink]="['/sport/tennis']"></Button>
-            <Button class="btn btn-primary w-full " text="football" [nsRouterLink]="['/sport/football']"></Button>
+            <Button class="btn btn-primary w-full " text="basket"  [nsRouterLink]="['/sport/categorie' ,  basket.text]" (tap)="mol(basket.text)"  #basket></Button>
+            <Button class="btn btn-primary w-full " text="tennis"  [nsRouterLink]="['/sport/categorie', tennis.text]" #tennis></Button>
+            <Button class="btn btn-primary w-full " text="football" [nsRouterLink]="['/sport/categorie', football.text]" #football></Button>
         </StackLayout>        
     </StackLayout>
 </RadSideDrawer>

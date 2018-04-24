@@ -6,9 +6,6 @@ import { NativeScriptModule } from 'nativescript-angular/nativescript.module';
 import { SportRoutingModule } from './sport-routing.module';
 import { SportComponent } from './sport.component';
 import { BasketComponent } from './basket/basket.component';
-import { VolleyballComponent } from './volleyball/volleyball.component';
-import { FootballComponent } from './football/football.component';
-import { TennisComponent } from './tennis/tennis.component';
 import { WelcomeSportComponent }  from './welcomesport/welcomesport.component';
 import { ActionItemComponent } from './actionitem/actionitem.component';
 import { TabItemComponent }  from './tabitem/tabitem.component';
@@ -27,9 +24,6 @@ import { NativeScriptHttpClientModule } from "nativescript-angular/http-client";
   declarations: [
     SportComponent,
     BasketComponent,
-    VolleyballComponent,
-    FootballComponent,
-    TennisComponent,
     WelcomeSportComponent,
     ActionItemComponent,
     TabItemComponent, 
